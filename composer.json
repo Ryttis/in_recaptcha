@@ -10,15 +10,21 @@
     "php": ">=5.6"
   },
   "require-dev": {
-    "prestashop/php-dev-tools": "^3.0",
-    "friendsofphp/php-cs-fixer": "v2.19.3",
-    "phpstan/phpstan": "1.9.14"
+    "prestashop/php-dev-tools": "~3.0"
   },
   "autoload": {
+    "psr-4": {
+      "Invertus\\Inrecaptcha\\": "src/"
+    },
     "classmap": [
       "inrecaptcha.php",
       "controllers"
     ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Invertus\\Inrecaptcha\\Tests\\": "tests/"
+    }
   },
   "author": "Invertus",
   "license": "AFL-3.0"
