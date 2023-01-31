@@ -9,14 +9,11 @@
  *
  *  International Registered Trademark & Property of INVERTUS, UAB
  */
+
 namespace Invertus\Inrecaptcha\Infrastructure\Bootstrap\Install;
 
-class HookInstaller implements InstallerInterface
+class ConfigurationInstaller implements InstallerInterface
 {
-
-    /**
-     * @inheritDoc
-     */
     public function init()
     {
         // TODO: Implement init() method.

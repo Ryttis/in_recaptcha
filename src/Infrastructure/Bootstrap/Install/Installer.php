@@ -12,8 +12,6 @@
 
 namespace Invertus\Inrecaptcha\Infrastructure\Bootstrap\Install;
 
-
-
 if (!defined('_PS_VERSION_')) {
     exit;
 }
