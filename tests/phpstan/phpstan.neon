@@ -1,0 +1,25 @@
+includes:
+- %currentWorkingDirectory%/vendor/prestashop/php-dev-tools/phpstan/ps-module-extension.neon
+
+parameters:
+paths:
+# From PHPStan 0.12, paths to check are relative to the neon file
+- ../../controllers
+- ../../src
+- ../../inrecaptcha.php
+level: 2
+reportUnmatchedIgnoredErrors: false
+ignoreErrors:
+- '#Cannot call method getFlashBag\(\) on object\|false.#'
+- '#Unsafe usage of new static\(\).#'
+- '#Access to an undefined property HelperList::\$shopLinkType\.#'
+
+- '#Access to undefined constant PrestaShopLogger::LOG_SEVERITY_LEVEL_INFORMATIVE.#'
+- '#Access to undefined constant PrestaShopLogger::LOG_SEVERITY_LEVEL_WARNING.#'
+- '#Access to undefined constant PrestaShopLogger::LOG_SEVERITY_LEVEL_ERROR.#'
+- '#Access to undefined constant PrestaShopLogger::LOG_SEVERITY_LEVEL_MAJOR.#'
+
+- '#Call to an undefined method Invertus\\Faire\\Infrastructure\\Controller\\Admin\\Framework\\AcceptFaireOrderController::trans\(\).#'
+
+- '#Call to method assign\(\) on an unknown class Smarty_Internal_Template.#'
+- '#Call to method fetch\(\) on an unknown class Smarty_Internal_Template.#'
