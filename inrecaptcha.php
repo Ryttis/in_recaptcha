@@ -89,10 +89,31 @@ class Inrecaptcha extends Module
      */
     public function install()
     {
-        return true;
+        $this->setDefaultConfig();
+
+        if (parent::install()
+            && $this->installTab()
+            && $this->registerHook($this->hook_list)
+        ) {
+            return true;
+        } else {
+            $this->_errors[] = $this->l('There was an error during the installation.');
+
+            return false;
+        }
     }
 
     public function uninstall()
+    {
+        return true;
+    }
+
+    public function setDefaultConfig()
+    {
+        return true;
+    }
+
+    public function installTab()
     {
         return true;
     }
