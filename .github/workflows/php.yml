@@ -25,7 +25,7 @@ jobs:
         uses: actions/checkout@v2.0.0
 
       - name: Run PHP-CS-Fixer
-        uses: Ryttis/github-php-action/php-cs-fixer/
+        uses: Ryttis/github-php-action/php-cs-fixer@master
 
   phpstan:
     name: PHPStan
